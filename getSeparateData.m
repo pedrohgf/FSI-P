@@ -20,6 +20,14 @@ for i=1:15
     Features(idx,:) = [];
 end
 
+for i=22:36
+    idx = Labels == i;
+    simpleLabels = [simpleLabels ; Labels(idx)];
+    simpleFeatures = [simpleFeatures ; Features(idx)];
+    Labels(idx) = [];
+    Features(idx,:) = [];
+end
+
 complexFeatures = Features;
 complexLabels = Labels;
 
